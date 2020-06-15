@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Quite Light</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link href="plugin-frameworks/bootstrap.min.css" rel="stylesheet">
+	<link href="plugin-frameworks/swiper.css" rel="stylesheet">
+
+	<link href="fonts/ionicons.css" rel="stylesheet">
+
+
+	<link href="common/styles.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+<header>
+		<a class="logo" href="index.html"><img src="images/logo-white.png" alt="Logo"></a>
+
+		<div class="right-area">
+			<form class="src-form" action="">
+				<button type="submit"><i class="ion-search"></i></a></button>
+				<input type="text" placeholder="Search here">
+			</form><!-- src-form -->
+		</div><!-- right-area -->
+
+		<a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon"></i></a>
+
+		<ul class="main-menu" id="main-menu">
+			<li><a href="index.html">Home</a></li>
+			<li class="drop-down"><a href="#!">Categories<i class="ion-arrow-down-b"></i></a>
+				<ul class="drop-down-menu drop-down-inner">
+					<li><a href="#">Tech</a></li>
+					<li><a href="#">Sports</a></li>
+					<li><a href="#">Art</a></li>
+					<li><a href="#">Photography</a></li>
+				</ul>
+			</li>
+
+			<li><a href="02_category.html">Trending</a></li>
+			<li><a href="#">Publish</a></li>
+			<li><a href="04_regular_static.html">About Us</a></li>
+			<li><a href="05_contact.html">Contact</a></li>
+		</ul>
+
+		<div class="clearfix"></div>
+	</header>
+
+	<div class="slider-main h-500x h-sm-auto pos-relative pt-95 pb-25">
+		<div class="img-bg bg-1 bg-layer-4"></div>
+		<div class="container-fluid h-100 mt-xs-50">
+			<div class="dplay-tbl">
+				<div class="dplay-tbl-cell color-white text-center">
+
+					<h1 class="ptb-50"><b>Publish Your Article</b></h1>
+
+				</div><!-- dplay-tbl-cell -->
+			</div><!-- dplay-tbl -->
+		</div><!-- container -->
+	</div><!-- slider-main -->
+
+<div class="w3-panel w3-center w3-xlarge">
+	Some Instructions and Rules Here<br>
+	Please Read our Selection Criteria before submitting your article
+</div>
+<br>
+
+<DIV class="w3-center w3-panel w3-xlarge w3-mobile">
+	<div class="w3-row w3-mobile">
+		<div class="w3-container w3-half">
+			<label for="email" >Email</label>
+		</div>
+		<div  class="w3-third ">
+			<input type="email" id="email"  class="w3-input w3-center"  placeholder="Enter your Email" required>
+		</div>
+	</div>
+
+<br>
+	<div class="w3-row">
+		<div class="w3-container w3-half">
+			<label for="code" class="w3-container" >OTP</label>
+		</div>
+		<div class=" w3-half w3-row">
+			<div  class=" w3-center  w3-half">
+				<input type="password" id="code" class="w3-input w3-center w3-margin-right" placeholder="OTP"onclick="SendOTP()" required maxlength="6">
+			</div>
+			<div  class="w3-container w3-center w3-third ">
+				<div class="w3-button w3-border-bottom w3-panel ">
+					Get OTP
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+
+</DIV>
+<div class="w3-center w3-panel ">
+	<button class="btn-b-lg btn-brdr-grey plr-25 color-ash " type="submit" onclick="Verify()"><b>Verify Email</b></button>
+
+</div>
+<br>
+
+<br>
+	<footer class="bg-191 color-ash pt-50 pb-20 text-left center-sm-text">
+
+		<div class="container-fluid">
+			<div class="row">
+
+				<div class="col-lg-1"></div>
+
+				<div class="col-md-4 col-lg-6 mb-30">
+					<div class="card h-100">
+						<div class="dplay-tbl">
+							<div class="dplay-tbl-cell">
+
+								<a href="index.html"><img src="images/logo-white.png"></a>
+								<p class="color-ash mt-25"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ion-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+
+							</div><!-- dplay-tbl-cell -->
+						</div><!-- dplay-tbl -->
+					</div><!-- card -->
+				</div><!-- col-lg-4 col-md-6 -->
+
+				<div class="col-md-4 col-lg-2 mb-30">
+					<div class="card h-100">
+						<div class="dplay-tbl">
+							<div class="dplay-tbl-cell">
+
+								<ul class="list-a-plr-10">
+									<li><a href="#"><i class="ion-social-facebook"></i></a></li>
+									<li><a href="#"><i class="ion-social-twitter"></i></a></li>
+									<li><a href="#"><i class="ion-social-youtube"></i></a></li>
+								</ul>
+
+							</div><!-- dplay-tbl-cell -->
+						</div><!-- dplay-tbl -->
+					</div><!-- card -->
+				</div><!-- col-lg-4 col-md-6 -->
+
+				<div class="col-md-4 col-lg-2 mb-30 text-left">
+					<div class="card h-100">
+						<div class="dplay-tbl">
+							<div class="dplay-tbl-cell">
+								<form class="form-block form-brdr-b mx-w-400x m-auto">
+									<div id="sub_message">
+<br>
+									</div>
+									<input class="color-white ptb-15 center-sm-text" type="text" placeholder=" Your Email">
+									<button class="mt-30 btn-brdr-grey color-ash w-100 text-center" type="submit">SUBSCRIBE</button>
+
+								</form>
+							</div><!-- dplay-tbl-cell -->
+						</div><!-- dplay-tbl -->
+					</div><!-- card -->
+				</div><!-- col-lg-4 col-md-6 -->
+
+			</div><!-- row -->
+		</div><!-- container -->
+	</footer>
+
+	<!-- SCIPTS -->
+
+	<script src="plugin-frameworks/jquery-3.2.1.min.js"></script>
+
+	<script src="plugin-frameworks/bootstrap.min.js"></script>
+
+	<script src="plugin-frameworks/swiper.js"></script>
+
+
+	<script src="common/scripts.js"></script>
+</body>
+</html>
