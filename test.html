@@ -91,6 +91,7 @@
 		</div><!-- container -->
 	</div><!-- slider-main -->
 <script>
+var server_path = "https://244cf355a185.ngrok.io/";
 function ValidateEmail(mail)
 {
  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
@@ -119,7 +120,7 @@ var checkOTP = 0;
 
 				}
   			};
-  			xhttp.open("POST", "http://192.168.29.197:5000/sendOTP", true);
+  			xhttp.open("POST", server_path+"sendOTP", true);
  			xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 			xhttp.send("id="+id);
 			document.getElementById("sendcode").style.display = "none";
@@ -251,7 +252,7 @@ var checkOTP = 0;
 					document.getElementById("sec4-inst").style.display = "block";
 				}
   			};
-  			xhttp.open("POST", "http://192.168.29.197:5000/submit", true);
+  			xhttp.open("POST", server_path+"submit", true);
 			xhttp.send(formData);
 
 		}
@@ -305,17 +306,41 @@ var checkOTP = 0;
 		<hr  style="width:80%; margin:auto;margin-top:10px;">
 </div>
 <br>
-<div class="w3-center w3-panel w3-xlarge w3-mobile" id = "sec2" style="display:none;" >
-<div>
-	Some Terms and Conditions Here
+<div class=" w3-panel w3-xlarge w3-mobile" id = "sec2" style="display:none;" >
+<div class="w3-container w3-medium w3-left ">
+	<div class="w3-large w3-center">
+		Welcome to Project-x ! Here is a quick summary of the highlights of our Terms of Service:
+	</div>
+
 	<br>
-	//<br>
-	//<br>
-	//<br>
-	//<br>
-	<br>
+
+- Our mission is to share and grow the world’s knowledge. The project-x platform offers a place to upload your creative projects and connect with people who contribute unique insights. This empowers people to learn from each other and to better understand the world.<br>
+- You own the content that you post; you also grant us and other users of the Project-x platform certain rights and license to use it.<br>
+- You are responsible for the content that you post. This includes ensuring that you have the rights needed for you to post that content and that your content does not violate the legal rights of another party or any applicable laws.<br>
+- You can repost content from Project-x elsewhere, provided that you attribute the content back to the PROJECT-X platform and respect the rights of the original poster, including any “not for reproduction” designation, and do not use automated tools.<br>
+- We do not endorse or verify content posted by users. Our content and materials are provided to you “as is,” without any guarantees. You are solely responsible for your own use of the Project-x platform. Posts from lawyers, doctors, and other professionals should not be treated as a substitute for professional advice for your specific situation.<br>
+- You agree to follow the rules of our platform. When you use the Project-x platform, you also agree to our Terms of Service, accept our Privacy Policy, and agree to follow our Acceptable Use Policy, Copyright Policy, and Trademark Policy.<br>
+- We offer tools for you to give feedback and report complaints. If you think someone has violated your intellectual property rights, other laws, or Project-x's policies, you can initiate a report at the contact us portal.<br>
+<br>
+	<div class="w3-panel w3-center w3-xxlarge" >
+		Terms of Service<br>
+		<div class="w3-small" >Please Read the Terms of Service carefully </div>
+		<hr  style="width:80%; margin:auto;margin-top:10px;">
+	</div>
+
+<br>
+- Using the Project-x Platform:<br>
+- Privacy Policy. Our privacy practices are set forth in our Privacy Policy. By use of the Project-x Platform, you agree to accept our Privacy Policy, regardless of whether you are a registered user.<br>
+- Acceptable Use Policy. In your interaction with others on the Project-x Platform, you agree to follow the Acceptable Use Policy at all times.<br>
+- Termination. You may close your account at any time by going to account settings and disabling your account. We may terminate or suspend your Project-x account if you violate any Project-x policy or for any other reason.<br>
+- Changes to the Project-x Platform. We are always trying to improve your experience on the Project-x Platform. We may need to add or change features and may do so without notice to you.<br>
+- Feedback. We welcome your feedback and suggestions about how to improve the Project-x Platform. Feel free to submit feedback. By submitting feedback, you agree to grant us the right, at our discretion, to use, disclose and otherwise exploit the feedback, in whole or part, freely and without compensation to you.<br>
 </div>
-	<input type="checkbox" id="check" style="margin-right:10px;">I accept the Terms And Conditions
+
+	<div class="w3-center w3-panel w3-margin-top">
+			<input type="checkbox" id="check"> I accept the Terms And Conditions
+
+	</div>
 </div>
 
 
@@ -388,9 +413,7 @@ var checkOTP = 0;
 
 </div>
 <br>
-<script>
 
-</script>
 
 <br>
 	<footer class="bg-191 color-ash pt-50 pb-20 text-left center-sm-text">
