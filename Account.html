@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Quite Light</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link href="plugin-frameworks/bootstrap.min.css" rel="stylesheet">
+	<link href="plugin-frameworks/swiper.css" rel="stylesheet">
+
+	<link href="fonts/ionicons.css" rel="stylesheet">
+
+
+	<link href="common/styles.css" rel="stylesheet">
+
+
+</head>
+<body style="background-color:#dce3e1;">
+	<link rel="stylesheet" href="common/w3.css">
+
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAJ4SliyJUZLL_DY1Tb2euSFkjn-9wBqVw",
+    authDomain: "project-x-gp.firebaseapp.com",
+    databaseURL: "https://project-x-gp.firebaseio.com",
+    projectId: "project-x-gp",
+    storageBucket: "project-x-gp.appspot.com",
+    messagingSenderId: "66182583022",
+    appId: "1:66182583022:web:cb0168c7ba0235d45499ff",
+    measurementId: "G-N1XCFBBPE2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+    var auth = firebase.auth();
+</script>
+	<header>
+		<a class="logo" href="index.html"><img src="images/logo-white.png" alt="Logo"></a>
+
+
+		<div class="right-area" >
+			<div class="w3-circle w3-container w3-xlarge  w3-border-grey w3-hover-text-amber btn-rightarea w3-right w3-margin-right" id="accBtn"  style="padding:4px 4px;  display:none;">
+				<a href="Account.html" id="accInfo1"><img src=""  id="accPic" class="w3-circle" style="width:40px;height:40px" ></a>
+			</div>
+			<div class="w3-container w3-xlarge w3-center btn-rightarea " id="sinbtn"  style="display:none; position:relative;top:20%;margin-top:0px;"><a href="Login.html">Sign In</a></div>
+		</div><!-- right-area -->
+
+		<a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon " style="margin-right:10px"></i></a>
+
+		<ul class="main-menu" id="main-menu">
+			<li><a href="index.html">Home</a></li>
+			<li class="drop-down"><a href="#!">Categories<i class="ion-arrow-down-b"></i></a>
+				<ul class="drop-down-menu drop-down-inner" style="min-width:100px;">
+					<li><a href="Category.html">Tech</a></li>
+					<li><a href="#">Sports</a></li>
+					<li><a href="#">Art</a></li>
+					<li><a href="#">Photography</a></li>
+				</ul>
+			</li>
+
+			<li><a href="Trending.html">Trending</a></li>
+			<li><a href="Publish.html">Publish</a></li>
+			<li><a href="04_regular_static.html">About Us</a></li>
+			<li><a href="05_contact.html">Contact</a></li>
+		</ul>
+
+		<div class="clearfix"></div>
+	</header>
+	<div class="slider-main h-30x h-sm-auto pos-relative pt-95 pb-25">
+		<div class="img-bg bg-1 bg-layer-4"></div>
+		<div class="container-fluid h-100 mt-xs-50">
+			<div class="dplay-tbl">
+				<div class="dplay-tbl-cell color-white text-center">
+
+					<h1 class="ptb-50"><b>Account</b></h1>
+
+				</div><!-- dplay-tbl-cell -->
+			</div><!-- dplay-tbl -->
+		</div><!-- container -->
+	</div><!-- slider-main -->
+
+	<div class="w3-container w3-center w3-xlarge w3-white" style="width:75%;min-width:375px;margin:auto;" >
+		<br>
+		<div>
+			<div class="w3-left w3-container" style="width:100%;">
+
+				<b class="w3-left">
+				Profile
+				</b>
+				<br>
+				<hr style="width:100%">
+			</div>
+			<div class="w3-container w3-left w3-large">
+				<b>
+				Your Name
+				</b>
+				<br>
+			</div>
+
+			<div  class=" w3-container w3-left  w3-large" style="width:100%;text-align:left;">
+				<div id="name">
+				-
+				</div>
+				<hr style="width:100%;">
+			</div>
+
+			<br>
+
+			<div class="w3-container w3-left w3-large">
+				<b>
+				Your Email
+				</b>
+				<br>
+			</div>
+
+			<div  class=" w3-container w3-left  w3-large" style="width:100%;text-align:left;">
+				<div id="email">
+				-
+				</div>
+				<hr style="width:100%;">
+			</div>
+
+
+
+			<div>
+				<div class="w3-left w3-xlarge w3-container " style="width:100%;text-align:left;" >
+				<br>
+				<br>
+				<b>Your Articles</b>
+				<hr style="width:100%;">
+
+			</div>
+				<br>
+				<div style="min-height:300px;margin-bottom:75px;margin-top:300px;position:relative;top:0px;">
+
+				<table id="articleinfo" class=" w3-container w3-table w3-center w3-striped w3-medium w3-bordered w3-centered" style="width:90%;margin:auto;">
+				<tr class="w3-large">
+					<td><b>Title</b></td>
+					<td><b>Date Of Publish</b></td>
+					<td><b>Status</b></td>
+				</tr>
+
+			</table>
+
+				<div id="noarticle" class="w3-center" style="background-color:#f2f5f4; width:90%;margin:auto;">
+				It Seems that you didn't submit any article till now<br>
+				Submit it <a href="Publish.html" class="w3-text-blue w3-hover-text-amber ">here</a>
+			</div>
+			</div>
+			</div>
+
+
+		</div>
+
+
+		<div class=" w3-container w3-center" style="margin-bottom:75px;" >
+			<div class="w3-panel w3-button w3-red w3-center w3-xlarge w3-round"  onclick="signout()">Sign Out</div>
+		</div>
+
+
+
+	</div>
+
+<script>
+document.getElementById("name").innerHTML = localStorage.name;
+document.getElementById("email").innerHTML = localStorage.email;
+	//var server_url = "https://still-cliffs-56902.herokuapp.com/";
+	var server_url = 'http://localhost:5000/'
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+
+             var json = JSON.parse(this.responseText);
+              	var table = document.getElementById("articleinfo");
+              	var i=0;
+              	while(json.titles[i]){
+              	document.getElementById("noarticle").style.display = "none";
+  				var row = table.insertRow(1);
+  				var cell1 = row.insertCell(0);
+ 				var cell2 = row.insertCell(1);
+				var cell3 = row.insertCell(2);
+
+				cell1.innerHTML = json.titles[i];
+				cell2.innerHTML = json.date[i];
+				var stat = json.status[i];
+				if(stat == 'Published'){
+					stat= stat.link("Article%20Template.html?id="+json.art_id[i]);
+					stat = stat.fontcolor("green");
+				} else {
+				stat = stat.fontcolor("orange");
+
+				}
+				cell3.innerHTML = stat;
+				i+=1;
+				}
+    }
+  };
+    xhttp.open("POST", server_url+"getarticleinfo", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.setRequestHeader('Access-Control-Allow-Origin', 'http://localhost:1234');
+    xhttp.send("id="+localStorage.user_id);
+
+</script>
+
+
+
+<div id="error" class="w3-panel w3-red w3-text-white w3-center " style="display:none; height:50px;"></div>
+
+
+		<footer class="bg-191 color-ash pt-50 pb-20 text-left center-sm-text">
+
+		<div class="container-fluid">
+			<div class="row">
+
+				<div class="col-lg-1"></div>
+
+				<div class="col-md-4 col-lg-6 mb-30">
+					<div class="card h-100">
+						<div class="dplay-tbl">
+							<div class="dplay-tbl-cell">
+
+								<a href="index.html"><img src="images/logo-white.png"></a>
+								<p class="color-ash mt-25"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ion-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+
+							</div><!-- dplay-tbl-cell -->
+						</div><!-- dplay-tbl -->
+					</div><!-- card -->
+				</div><!-- col-lg-4 col-md-6 -->
+
+				<div class="col-md-4 col-lg-2 mb-30">
+					<div class="card h-100">
+						<div class="dplay-tbl">
+							<div class="dplay-tbl-cell">
+
+								<ul class="list-a-plr-10">
+									<li><a href="#"><i class="ion-social-facebook"></i></a></li>
+									<li><a href="#"><i class="ion-social-twitter"></i></a></li>
+									<li><a href="#"><i class="ion-social-youtube"></i></a></li>
+								</ul>
+
+							</div><!-- dplay-tbl-cell -->
+						</div><!-- dplay-tbl -->
+					</div><!-- card -->
+				</div><!-- col-lg-4 col-md-6 -->
+
+				<div class="col-md-4 col-lg-2 mb-30 text-left">
+					<div class="card h-100">
+						<div class="dplay-tbl">
+							<div class="dplay-tbl-cell">
+								<form class="form-block form-brdr-b mx-w-400x m-auto">
+									<div id="sub_message">
+<br>
+									</div>
+									<input class="color-white ptb-15 center-sm-text" type="text" placeholder=" Your Email">
+									<button class="mt-30 btn-brdr-grey color-ash w-100 text-center" type="submit">SUBSCRIBE</button>
+
+								</form>
+							</div><!-- dplay-tbl-cell -->
+						</div><!-- dplay-tbl -->
+					</div><!-- card -->
+				</div><!-- col-lg-4 col-md-6 -->
+
+			</div><!-- row -->
+		</div><!-- container -->
+	</footer>
+
+		<script src="plugin-frameworks/signin.js"></script>
+
+</body>
+</html>

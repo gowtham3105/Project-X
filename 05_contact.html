@@ -22,39 +22,41 @@
 	
 </head>
 <body>
-	
+		<link rel="stylesheet" href="common/w3.css">
+
 	<header>
 		<a class="logo" href="index.html"><img src="images/logo-white.png" alt="Logo"></a>
 
-		<div class="right-area">
-			<form class="src-form">
-				<button type="submit"><i class="ion-search"></i></a></button>
-				<input type="text" placeholder="Search here">
-			</form><!-- src-form -->
+
+		<div class="right-area" >
+			<div class="w3-circle w3-container w3-xlarge  w3-border-grey w3-hover-text-amber btn-rightarea w3-right w3-margin-right" id="accBtn"  style="padding:4px 4px;  display:none;">
+				<a href="Account.html" id="accInfo1"><img src=""  id="accPic" class="w3-circle" style="width:40px;height:40px" ></a>
+			</div>
+			<div class="w3-container w3-xlarge w3-center btn-rightarea " id="sinbtn"  style="display:none; position:relative;top:20%;margin-top:0px;"><a href="Login.html">Sign In</a></div>
 		</div><!-- right-area -->
 
-		<a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon"></i></a>
+		<a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon " style="margin-right:10px"></i></a>
 
 		<ul class="main-menu" id="main-menu">
 			<li><a href="index.html">Home</a></li>
 			<li class="drop-down"><a href="#!">Categories<i class="ion-arrow-down-b"></i></a>
-				<ul class="drop-down-menu drop-down-inner">
-					<li><a href="#">Tech</a></li>
+				<ul class="drop-down-menu drop-down-inner" style="min-width:100px;">
+					<li><a href="Category.html">Tech</a></li>
 					<li><a href="#">Sports</a></li>
 					<li><a href="#">Art</a></li>
 					<li><a href="#">Photography</a></li>
 				</ul>
 			</li>
 
-			<li><a href="02_category.html">Trending</a></li>
-			<li><a href="test.html">Publish</a></li>
+			<li><a href="Trending.html">Trending</a></li>
+			<li><a href="Publish.html">Publish</a></li>
 			<li><a href="04_regular_static.html">About Us</a></li>
 			<li><a href="05_contact.html">Contact</a></li>
 		</ul>
-		
+
 		<div class="clearfix"></div>
 	</header>
-	
+		<script src="plugin-frameworks/signin.js"></script>
 	
 	<div class="slider-main h-500x h-sm-auto pos-relative pt-95 pb-25">
 		<div class="img-bg bg-1 bg-layer-4"></div>
@@ -62,7 +64,7 @@
 			<div class="dplay-tbl">
 				<div class="dplay-tbl-cell color-white text-center">
 				
-					<h1 class="ptb-50"><b>Terms of Use</b></h1>
+					<h1 class="ptb-50"><b>Contact</b></h1>
 					
 				</div><!-- dplay-tbl-cell -->
 			</div><!-- dplay-tbl -->
@@ -75,30 +77,70 @@
 			<div class="row">
 				<div class="col-xl-2"></div>
 				<div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
-					<form class="form-block form-h-55 form-plr-20 form-bg-white text-center">
+					<div class="w3-panel w3-large w3-text-red w3-center w3-margin" id="error" style="display:none;">
+						<b>Sorry, We are unable to submit your request</b>
+
+						<br>
+						<br>
+					</div>
+
+					<form class="form-block form-h-55 form-plr-20 form-bg-white text-center" style="display:block;" id="form">
 						<div class="row">
 							<div class="col-sm-6 mb-30">
-								<input type="text" placeholder="Name">
+								<input type="text" id="name" placeholder="Name">
 							</div><!-- col-sm-6-->	
 							
 							<div class="col-sm-6 mb-30">
-								<input type="text" placeholder="Email">
+								<input type="text" id="email" placeholder="Email">
 							</div><!-- col-sm-6-->
 							
 							<div class="col-sm-12 mb-30">
-								<textarea class="ptb-20 min-h-200x" placeholder="Comment"></textarea>
+								<textarea class="ptb-20 min-h-200x" id="content" placeholder="Comment"></textarea>
 							</div><!-- col-sm-12-->
 							
 						</div><!-- row-->
-						<button class="btn-b-lg btn-brdr-grey plr-25 color-ash" type="submit"><b>Send Message</b></button>
+						<button class="btn-b-lg btn-brdr-grey plr-25 color-ash" type="button" onclick="Send()"><b>Send Message</b></button>
 						
 					</form>
+					<div class="w3-panel w3-xlarge w3-text-green w3-center" id="Success" style="display:none;height:150px;margin-top:100px;"><b>Your Comment is Submited.<br>
+						Thank You For Your feedback</b>
+					</div>
+
 				</div><!-- col-sm-6-->	
 			</div><!-- row-->	
 		</div><!-- container -->
 	</section>
 	
-	
+	<script>
+		var server_url = "https://still-cliffs-56902.herokuapp.com/";
+//var server_url = "http://localhost:5000/";
+
+		function Send(){
+		console.log("gi");
+		var name = document.getElementById('name').value;
+		var email = document.getElementById('email').value;
+		var content = document.getElementById('content').value;
+
+		var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        		if (this.responseText == 1){
+        		document.getElementById("Success").style.display = 'block';
+        		document.getElementById("form").style.display = 'none';
+        	}
+        	else{
+        		document.getElementById("error").style.display = 'block';
+        	}
+            }}
+
+             xhr.open("POST", server_url+"contact", true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.setRequestHeader('Access-Control-Allow-Origin', 'http://localhost:1234');
+     xhr.send("email="+email+"&name="+name+"&content="+content);
+
+		}
+
+	</script>
 	<footer class="bg-191 color-ash pt-50 pb-20 text-left center-sm-text">
 		
 		<div class="container-fluid">

@@ -63,6 +63,19 @@ a b.light-color:hover{ text-decoration: none; color: #F9B500; }
 b{ font-weight: 700; }
 
 img{ width: 100%; }
+img#pic_1 {
+    width: auto;
+}
+img#pic_2 {
+    width: auto;
+}
+img#pic_3 {
+    width: auto;
+}
+img#pic_4 {
+    width: auto;
+}
+
 
 li{ list-style: none; display: inline-block; line-height: 1.6; font-size: .9em; }
 
@@ -198,12 +211,29 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu{ display: block;
 
 
 /* RESPONSIVE */
+@media only screen and (min-width: 1200px) {
 
+	/* SEARCH AREA */
+
+	header .right-area{ width: 200px;
+	 }
+	.btn-rightarea{
+
+	margin-top:12px;
+	}
+
+}
 @media only screen and (max-width: 1200px) {
 	
 	/* SEARCH AREA */
 
-	header .right-area{ width: 250px; }
+	header .right-area{ width: 200px;
+	 }
+	.btn-rightarea{
+
+
+	margin-top:12px;
+	}
 
 }
 
@@ -218,8 +248,12 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu{ display: block;
 	
 	/* SEARCH AREA */
 
-	header .right-area{ height: 60px; width: 200px; }
+	header .right-area{ height: 60px; width: 150px; }
 
+    .btn-rightarea{
+
+	margin-top:5px;
+	}
 }
 
 @media only screen and (max-width: 767px) {
@@ -265,14 +299,21 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu{ display: block;
 	header .main-menu li.drop-down > ul.drop-down-menu li a{ padding-left: 25px; }
 	
 	header .main-menu li.drop-down > ul.drop-down-inner li a{ padding-left: 35px; }
-	
+
+	.btn-rightarea{
+
+	margin-top:3px;
+	}
 }
 
 @media only screen and (max-width: 575px) {
 
 
 	header .right-area{ width: 100%; float: none; clear: both; border-top: 1px solid #aaa; border-left: 0; }
-	
+	.btn-rightarea{
+
+	margin-top:6px;
+	}
 	header ul.main-menu > li > a{ padding: 15px; }
 	
 	
@@ -284,7 +325,7 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu{ display: block;
 	
 }
 
-@media only screen and (max-width: 359px) {
+@media only screen and (max-width: 376px) {
 
 	header .heading-wrapper{  padding: 30px 20px 20px; }
 
@@ -292,10 +333,38 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu{ display: block;
 
 	header .info .right-area{ margin-left: 35px; }
 
+    .btn-rightarea{
+
+	margin-top:4px;
+	}
+}
+@media only screen and (max-width: 361px) {
+
+	header .heading-wrapper{  padding: 30px 20px 20px; }
+
+	header .info .icon{ font-size: 25px; }
+
+	header .info .right-area{ margin-left: 35px; }
+
+    .btn-rightarea{
+	left:150px;
+	margin-top:3px;
+	}
 }
 
+@media only screen and (max-width: 330px) {
 
+	header .heading-wrapper{  padding: 30px 20px 20px; }
 
+	header .info .icon{ font-size: 25px; }
+
+	header .info .right-area{ margin-left: 35px; }
+
+    .btn-rightarea{
+	left:130px;
+	margin-top:3px;
+	}
+}
 /* ---------------------------------
 2. COMMONS FOR PAGE DESIGN
 --------------------------------- */
