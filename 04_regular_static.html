@@ -22,39 +22,41 @@
 	
 </head>
 <body>
-	
-<header>
+		<link rel="stylesheet" href="common/w3.css">
+
+	<header>
 		<a class="logo" href="index.html"><img src="images/logo-white.png" alt="Logo"></a>
 
-		<div class="right-area">
-			<form class="src-form">
-				<button type="submit"><i class="ion-search"></i></a></button>
-				<input type="text" placeholder="Search here">
-			</form><!-- src-form -->
+
+		<div class="right-area" >
+			<div class="w3-circle w3-container w3-xlarge  w3-border-grey w3-hover-text-amber btn-rightarea w3-right w3-margin-right" id="accBtn"  style="padding:4px 4px;  display:none;">
+				<a href="Account.html" id="accInfo1"><img src=""  id="accPic" class="w3-circle" style="width:40px;height:40px" ></a>
+			</div>
+			<div class="w3-container w3-xlarge w3-center btn-rightarea " id="sinbtn"  style="display:none; position:relative;top:20%;margin-top:0px;"><a href="Login.html">Sign In</a></div>
 		</div><!-- right-area -->
 
-		<a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon"></i></a>
+		<a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon " style="margin-right:10px"></i></a>
 
 		<ul class="main-menu" id="main-menu">
 			<li><a href="index.html">Home</a></li>
 			<li class="drop-down"><a href="#!">Categories<i class="ion-arrow-down-b"></i></a>
-				<ul class="drop-down-menu drop-down-inner">
-					<li><a href="#">Tech</a></li>
+				<ul class="drop-down-menu drop-down-inner" style="min-width:100px;">
+					<li><a href="Category.html">Tech</a></li>
 					<li><a href="#">Sports</a></li>
 					<li><a href="#">Art</a></li>
 					<li><a href="#">Photography</a></li>
 				</ul>
 			</li>
 
-			<li><a href="02_category.html">Trending</a></li>
-			<li><a href="test.html">Publish</a></li>
+			<li><a href="Trending.html">Trending</a></li>
+			<li><a href="Publish.html">Publish</a></li>
 			<li><a href="04_regular_static.html">About Us</a></li>
 			<li><a href="05_contact.html">Contact</a></li>
 		</ul>
 
 		<div class="clearfix"></div>
 	</header>
-	
+
 	<div class="slider-main h-500x h-sm-auto pos-relative pt-95 pb-25">
 		<div class="img-bg bg-1 bg-layer-4"></div>
 		<div class="container-fluid h-100 mt-xs-50">
@@ -150,7 +152,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</footer>
 	
 	<!-- SCIPTS -->
-	
+	<script src="plugin-frameworks/signin.js"></script>
 	<script src="plugin-frameworks/jquery-3.2.1.min.js"></script>
 	
 	<script src="plugin-frameworks/bootstrap.min.js"></script>
